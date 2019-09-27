@@ -1,0 +1,41 @@
+@media only screen and (max-width: 425px) {
+
+    h1 {
+        font-size: 1.5rem !important;
+        line-height: 2rem !important;
+        width: 100% !important;
+    }
+
+    p{
+        font-size: 1rem !important;
+    }
+
+    form div {
+        flex-direction: column;
+        width: 100% !important;
+        padding-left: 0 !important;
+    }
+    
+
+    form div > div {
+        border:none !important;
+    }
+
+    .StatsContainer  span 
+    {
+        font-size: 4rem !important;
+    }
+
+    .fullpage-wrapper
+    {
+        padding-left: 10%;
+        padding-right: 5%;
+    }
+
+    .navigationContainer {
+
+        display: none !important;
+
+    }
+
+  }

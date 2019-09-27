@@ -1,0 +1,74 @@
+body
+{
+    margin:0;
+}
+
+.UseCasePageContainer
+{
+
+}
+
+.fullscreenDetailLeft {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    left: 0;
+  }
+  
+  .fullscreenDetailRight{
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    right: 0;
+    padding:2%;
+    padding-right: 8%;
+    padding-left: 6%;
+    background-color: transparent !important;
+  }
+
+  .contentContainer {
+      height: 75vh;
+      max-height: 80vh;
+      overflow: scroll;
+      overflow-x: hidden;
+  }
+
+  .contentContainer::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .contentContainer::-webkit-scrollbar-track {
+    background: black; 
+  }
+
+  .contentContainer::-webkit-scrollbar-thumb {
+    background: #FFC21C;
+    border-radius: 10px;
+  }
+  
+
+  .useCaseContent {
+
+      height: 80vh;
+  }
+
+  #particles-js {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+  }
+  #particles-js div {
+    height: 100%;
+    
+  }
+
+  a, a:visited {
+    color:#FFC21C;
+    text-decoration-line: none;
+    font-weight: bold;
+  }

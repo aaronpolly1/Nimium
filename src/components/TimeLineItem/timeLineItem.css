@@ -1,0 +1,51 @@
+/*TimeLine */
+
+.timeline{
+    margin-top: 220px;
+    width: max-content;
+  }
+  
+  
+  .timeline ul li {
+    position: relative;
+    width: 350px;
+    height: 6px;
+    background: #fff;
+    display: inline;
+    float: left;
+    margin-right: 50px;
+  }
+   
+  .timeline ul li.number {
+    background-color: transparent;
+  
+    width: 15px;
+    text-align: center;
+  }
+  
+  .timeline ul li div {
+    position: relative;
+    padding: 15px;
+    background:#D19900;
+    display: flex;
+    flex-direction: column;
+    top:30px;
+  }
+   
+  .timeline ul li div::before {
+      content: '';
+      position: absolute;
+      bottom: 7px;
+      width: 0;
+      height: 0;
+  }
+  
+  .timeline ul li:nth-child(odd) div {
+    top: -200px;
+  }
+   
+  .timeline ul li:nth-child(odd) div::before {
+    top: -90px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #F45B69 transparent transparent;
+  }

@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px) and (min-width:426px) {
+    .navigationContainer {
+
+        display: none !important;
+
+    }
+
+    .StatsContainer{
+        flex-direction: column !important;
+    }
+
+    .fullpage-wrapper{
+        width: 100% !important;
+        padding-left: 10% !important;
+        box-sizing: border-box;
+    }
+
+
+    h1{
+    
+        font-size: 2rem !important;
+        line-height: 3rem !important;
+    }
+
+    form div 
+    {
+        display:block;
+    }
+
+  }

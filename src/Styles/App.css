@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@media only screen and (min-width: 769px) {
+
+
+  
+  .navigationContainer {
+    width: 20%;
+    float: left;
+    position: absolute;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+   /*WHO WE ARE */
+   .StatsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 25%;
+  }
+
+  .fullpage-wrapper {
+    width: 80% !important;
+    float: right;
+    box-sizing: border-box;
+    padding-left: 5%;
+  }
+
+
+
+
+}
+.caseScroller
+{
+  width: 100%;
+  white-space: nowrap;
+overflow-x:auto;
+}
+
+body {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  
+ 
+  
+  .fullPageBackground {
+    background-color: purple;
+    display: inline-block;
+  }
+  
+  #particles-js {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+  }
+  #particles-js div {
+    height: 100%;
+    
+  }
+
+
+  .sectionContainer {
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 15%;
+  }
+
+  
+  nav li {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    list-style: none;
+  }
+
+  nav ul 
+  {
+    padding-left: 0px;
+  }
+  
+  /*Cases*/
+  
+  .caseContainer {
+    display: flex;
+    width: max-content;
+  }
+  
+  
+  
+  .fullscreenDetailLeft {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    background-color: #000000d9;
+    left: 0;
+  }
+  
+  .fullscreenDetailRight{
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    background-color: #000000d9;
+    right: 0;
+  
+  
+  }
+  
+  .fullscreenDetailRight p 
+  {
+  
+    line-height: 2rem;                                                                                                                                         
+  }
+ 
+  
+  
+  /*FULLPageJS Adaptations */
+  .fp-controlArrow{
+    display: none;
+  }
+
+  .leftArrow
+  {
+    color: #707070;
+  }
+
+  .right {
+    right: 0;
+  }
+
+  .scrollbox {
+    
+    height: 300px;
+    position: absolute;
+    width: 200px;
+
+  }
+  
+  
+  
+  
+  
+  span.number {
+    font-size: 3rem;
+      transform: translate(-35px, -25px);
+      position: absolute;
+  }
+
+  .button {
+    background-color: rgb(255, 194, 28);
+    border: none;
+    color: white;
+    padding: 1% 2%;
+    
+  }
+
+ .verticalLine
+  {
+    width: 50%;
+    border-right: 5px solid #101010;
+    flex-grow: 1;
+    box-sizing: border-box;
+  }
