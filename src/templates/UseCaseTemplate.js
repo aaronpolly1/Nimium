@@ -152,12 +152,12 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
           ></div>
         </div>
         {
-          (pageContext.previousCase)?(   <Link to={"/usecase/" + pageContext.previousCase.wordpress_id}>
+          (pageContext.previousCase)?(   <Link to={"/usecases/" + pageContext.previousCase.wordpress_id}>
           Previous Case{" "}
         </Link>):(undefined)
         }
         {
-          (pageContext.nextCase)?(        <Link to={"/usecase/" + pageContext.nextCase.wordpress_id}>Next Case</Link>
+          (pageContext.nextCase)?(        <Link to={"/usecases/" + pageContext.nextCase.wordpress_id}>Next Case</Link>
           ):(undefined)
         }
      

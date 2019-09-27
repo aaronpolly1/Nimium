@@ -3,7 +3,7 @@
 @media only screen and (min-width: 769px) {
 
 
-  
+
   .navigationContainer {
     width: 20%;
     float: left;
@@ -45,15 +45,15 @@ body {
     color: white;
     font-family: 'Open Sans', sans-serif;
   }
-  
-  
- 
-  
+
+
+
+
   .fullPageBackground {
     background-color: purple;
     display: inline-block;
   }
-  
+
   #particles-js {
     position: absolute;
     background-color: black;
@@ -62,7 +62,7 @@ body {
   }
   #particles-js div {
     height: 100%;
-    
+
   }
 
 
@@ -72,7 +72,7 @@ body {
     padding-top: 15%;
   }
 
-  
+
   nav li {
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
@@ -84,16 +84,16 @@ body {
   {
     padding-left: 0px;
   }
-  
+
   /*Cases*/
-  
+
   .caseContainer {
     display: flex;
     width: max-content;
   }
-  
-  
-  
+
+
+
   .fullscreenDetailLeft {
     box-sizing: border-box;
     display: block;
@@ -103,7 +103,7 @@ body {
     background-color: #000000d9;
     left: 0;
   }
-  
+
   .fullscreenDetailRight{
     box-sizing: border-box;
     display: block;
@@ -112,18 +112,18 @@ body {
     width: 50%;
     background-color: #000000d9;
     right: 0;
-  
-  
+
+
   }
-  
+
   .fullscreenDetailRight p 
   {
-  
+
     line-height: 2rem;                                                                                                                                         
   }
- 
-  
-  
+
+
+
   /*FULLPageJS Adaptations */
   .fp-controlArrow{
     display: none;
@@ -139,17 +139,17 @@ body {
   }
 
   .scrollbox {
-    
+
     height: 300px;
     position: absolute;
     width: 200px;
 
   }
-  
-  
-  
-  
-  
+
+
+
+
+
   span.number {
     font-size: 3rem;
       transform: translate(-35px, -25px);
@@ -161,7 +161,7 @@ body {
     border: none;
     color: white;
     padding: 1% 2%;
-    
+
   }
 
  .verticalLine

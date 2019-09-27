@@ -7,17 +7,6 @@ const UseCaseCard = props => {
 
  const { previousCase, nextCase } = props;
 
- var pc,nc = "-1"; 
- 
- if(previousCase !== undefined) 
- {
-   pc = previousCase.wordpress_id
- }
- if(nextCase !==undefined)
- {
-   nc = nextCase.wordpress_id
- }
-
   return (
     <div className="case">
       <div className="caseHeader">
@@ -28,7 +17,7 @@ const UseCaseCard = props => {
       <div className="caseDescription">
       <p>{props.case.acf.summary}</p>
       <Link
-      to={"/usecase/" +props.case.wordpress_id}>Read More</Link>  
+      to={"/usecases/" +props.case.wordpress_id}>Read More</Link>  
       </div>
     </div>
   );
