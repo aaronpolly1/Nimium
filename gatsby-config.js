@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your wordpress source
-        baseUrl: `localhost/Nimium`,
+        baseUrl: `http://nimium-env.ukqcmidxpz.eu-central-1.elasticbeanstalk.com`,
         protocol: `http`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
