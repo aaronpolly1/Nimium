@@ -11,6 +11,7 @@ import { Icon } from "semantic-ui-react"
 const UseCaseTemplate = ({ data, location, pageContext }) => {
 
 
+  console.warn("log",data)
 
   return (
     <Layout>
@@ -132,7 +133,7 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
         <img
           height="100%"
           width="100%"
-          src={data.wordpressAcfUsecase.acf.main_image.url}
+          src={data.wordpressAcfUsecase.acf.main_image.source_url}
         ></img>
       </div>
       <div className="fullscreenDetailRight">
@@ -178,27 +179,7 @@ export const query = graphql`
         summary
         main_image {
           wordpress_id
-          title
-          filename
-          filesize
-          url
-          link
-          alt
-          author
-          description
-          caption
-          name
-          status
-          uploaded_to
-          date
-          modified
-          menu_order
-          mime_type
-          type
-          subtype
-          icon
-          width
-          height
+          source_url
         }
       }
     }

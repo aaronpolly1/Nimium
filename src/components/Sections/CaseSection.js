@@ -15,7 +15,7 @@ const CaseSection = props => {
             summary
             content
             main_image {
-              url
+              source_url
             }
           }
           wordpress_id
