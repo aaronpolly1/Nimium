@@ -4,12 +4,18 @@ import './timeLineItem.css';
 
 
 const timeLineItem = props => {
+
+  const { step , index }  = props;
+  console.log(step);
+
   return (
     <li>
-      <span className="number">1</span>
+      <span className="number">{index+1}</span>
       <div>
-        <span>1934</span>
-To truly understand your challenge, we first listen and observe. We compare data, interview staff members, organize management meetings, … A holistic, cross-departmental approach is crucial to get to the root of the problem.
+        <span>{step.title}</span>
+        <span dangerouslySetInnerHTML={{
+              __html: step.excerpt,
+            }}></ span>
       </div>
     </li>
   );

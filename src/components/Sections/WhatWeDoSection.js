@@ -1,10 +1,27 @@
 import React from "react";
 import SectionHeader from "../SectionHeader";
 import TimeLineItem from "../TimeLineItem/timeLineItem";
+import { graphql, useStaticQuery } from "gatsby"
+
+
 
 const WhatWeDoSection = props => {
 
-  console.log(props.fullpageApi);
+  
+  const query = useStaticQuery( graphql`
+  {
+    allWordpressWpWorkingsteps {
+      edges {
+        node {
+          id
+          title
+          wordpress_id
+          excerpt
+        }
+      }
+    }
+  }
+`)
 
   return (
     <div class="slide">
@@ -28,15 +45,12 @@ const WhatWeDoSection = props => {
           <section class="timeline">
             
             <ul>
-              <TimeLineItem />
-              <TimeLineItem />
-              <TimeLineItem />
-              <TimeLineItem />
-              <TimeLineItem />
-              <TimeLineItem />
-              <TimeLineItem />
-              <TimeLineItem />
-              <TimeLineItem />
+            {
+              query.allWordpressWpWorkingsteps.edges.map((step,index) => {
+                return <TimeLineItem step={step.node} index={index} />
+              })
+            }
+
             </ul>
           
           </section>
