@@ -1,8 +1,55 @@
-@media only screen and (max-width: 768px) and (min-width:426px) {
+@media only screen and (max-width: 768px) {
     .navigationContainer {
 
-        display: none !important;
+       width: 100%;
+       position: fixed;
+       z-index: 1;
+       height: 100vh;
+       justify-content: center;
+       float: left;
+       flex-direction: column;
+       background-color: black;
+       display: none;
 
+
+    }
+
+   
+
+    .mobilebar {
+        height: 10%;
+        position: absolute !important;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        background-color: black;
+        z-index: 3;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        padding-right: 5%;
+        
+    }
+
+    .caseContainer
+    {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .case
+    {
+        margin:1%;
+    }
+
+    .caseDescription
+    {
+        display: none;
+    }
+
+    #mobilenav
+    {
+        display: none;
     }
 
     .StatsContainer{
@@ -27,4 +74,6 @@
         display:block;
     }
 
+
+    
   }

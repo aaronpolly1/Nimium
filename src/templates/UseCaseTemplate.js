@@ -5,13 +5,13 @@ import "./UseCaseTemplate.css"
 import Particles from "react-particles-js"
 import Layout from "../components/layout"
 import Link from "gatsby-link"
-
+import { IoIosArrowRoundBack } from "react-icons/all";
 import { Icon } from "semantic-ui-react"
 
 const UseCaseTemplate = ({ data, location, pageContext }) => {
 
 
-  console.warn("log",data)
+
 
   return (
     <Layout>
@@ -138,12 +138,10 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
       </div>
       <div className="fullscreenDetailRight">
         <Link to="/">
-          <Icon.Group size="large">
-            <Icon name=" arrow  left" size="big" className="leftArrow" />
-          </Icon.Group>
+            <IoIosArrowRoundBack size="5em"/>
         </Link>
 
-        <h1>Lorem Ipsum</h1>
+        <h1>{data.wordpressAcfUsecase.acf.title}</h1>
         <div className="contentContainer">
           <div
             className="useCaseContent"

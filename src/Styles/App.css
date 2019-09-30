@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-@media only screen and (min-width: 769px) {
 
+.mobilebar {
+  display: none;
+}
 
+img
+{
+  object-fit: cover;
+}
 
   .navigationContainer {
     width: 20%;
@@ -33,7 +39,7 @@
 
 
 
-}
+
 .caseScroller
 {
   width: 100%;
@@ -171,3 +177,4 @@ body {
     flex-grow: 1;
     box-sizing: border-box;
   }
+

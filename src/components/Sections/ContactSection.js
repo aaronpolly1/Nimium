@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from 'react';
 import SectionHeader from "../SectionHeader";
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/styles';
+import axios from 'axios';
 
 
 const styles = {
@@ -30,6 +31,9 @@ const styles = {
 const ContactSection = props => {
 
 
+  const { name,setName } = useState();
+  const { email,setEmail } = useState();
+  const { message, setMessage } = useState();
   const { classes } = props;
 
   return (
@@ -52,7 +56,7 @@ const ContactSection = props => {
         fullWidth
         id="name"
         label="Name"
-        value="test"
+        value={name}
         margin="normal"
         className={classes.input}
       
@@ -62,7 +66,7 @@ const ContactSection = props => {
         fullWidth
         id="email"
         label="Email"
-        value="email"
+        value={email}
         margin="normal"
         className={classes.input}
        
@@ -79,13 +83,29 @@ const ContactSection = props => {
           fullWidth
           rowsMax={8}
   className={classes.input}
+          value={message}
 />
         </div>
 
         </div>
        
       
-        <input className="button" style={{width:"25%", marginTop:"2%"}} type="submit" name="submit" value="SEND" />
+        <input className="button" style={{width:"25%", marginTop:"2%"}} type="submit" name="submit" value="SEND" onClick={(e)=>{
+          e.preventDefault();
+   
+          axios({
+            method:'post',
+            url:'http://localhost/Nimium/wp-json/rcdb/v1/messages',
+            data:{
+              fromName: name,
+              fromEmail: email,
+              message:message
+            }
+          })
+
+          alert("send")
+
+        }} />
       </form>
     </div>
   );

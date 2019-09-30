@@ -2,24 +2,23 @@
 
 .timeline{
     margin-top: 220px;
-    width: max-content;
   }
   
   
   .timeline ul li {
     position: relative;
-    width: 350px;
+    width: calc(100% / 5);
     height: 6px;
     background: #fff;
     display: inline;
     float: left;
-    margin-right: 50px;
+    margin-right: 5%;
   }
    
   .timeline ul li.number {
     background-color: transparent;
   
-    width: 15px;
+    width: 5%;
     text-align: center;
   }
   
