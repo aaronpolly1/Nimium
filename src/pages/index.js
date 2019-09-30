@@ -18,7 +18,7 @@ import WhoWeAreSection from "../components/Sections/WhoWeAreSection"
 import ContactSection from "../components/Sections/ContactSection"
 import { graphql, useStaticQuery } from "gatsby"
 import Particles from "react-particles-js"
-import $ from 'jquery' 
+// import $ from 'jquery' 
 import { display } from '@material-ui/system';
 
 const IndexPage = () => {
@@ -37,9 +37,12 @@ const IndexPage = () => {
   var sizeCases = query.allWordpressAcfUsecase.nodes.length
 
   useEffect(() => {
-    $('#hamburgermenu').click(function(){
-      $('#navigation').slideToggle().css("display","flex");
-    })
+  //   $('#hamburgermenu').click(function(){
+  //     $('#navigation').slideToggle().css("display","flex");
+  //   })
+
+      var menu = document.querySelector("#navigation");
+      var button = document.querySelector('#hamburgermenu').addEventListener("click", _ => menu.classList.toggle('is-active'))
   },[]);
 
   return (

@@ -9,8 +9,16 @@
        float: left;
        flex-direction: column;
        background-color: black;
-       display: none;
+       top:-100vh;
+       display: flex;
+       transition-duration: 0.4s;
+       transition-timing-function: ease-in;
+   
 
+    }
+
+    .navigationContainer.is-active {
+        top:0vh;
 
     }
 
