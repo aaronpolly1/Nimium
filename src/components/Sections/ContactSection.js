@@ -28,12 +28,12 @@ const styles = {
 };
 
 
+
+
 const ContactSection = props => {
 
-
-  const { name,setName } = useState();
-  const { email,setEmail } = useState();
-  const { message, setMessage } = useState();
+  
+  var name,email,message = "";
   const { classes } = props;
 
   return (
@@ -59,7 +59,8 @@ const ContactSection = props => {
         value={name}
         margin="normal"
         className={classes.input}
-      
+        onChange={(e) => {
+          name = e.target.value}}
 
       />
         <TextField
@@ -67,8 +68,11 @@ const ContactSection = props => {
         id="email"
         label="Email"
         value={email}
+        name="email"
         margin="normal"
         className={classes.input}
+        onChange={(e) => {
+          email = e.target.value}}
        
       />
         </div>
@@ -80,10 +84,12 @@ const ContactSection = props => {
           placeholder="Write Text here..."
           label="Message"
           multiline={true}
+          name="message"
           fullWidth
           rowsMax={8}
   className={classes.input}
-          value={message}
+          onChange={(e) => {
+            message = e.target.value}}
 />
         </div>
 
@@ -93,9 +99,10 @@ const ContactSection = props => {
         <input className="button" style={{width:"25%", marginTop:"2%"}} type="submit" name="submit" value="SEND" onClick={(e)=>{
           e.preventDefault();
    
+          alert(name)
           axios({
             method:'post',
-            url:'http://localhost/Nimium/wp-json/rcdb/v1/messages',
+            url:'http://nimium-env.ukqcmidxpz.eu-central-1.elasticbeanstalk.com/wp-json/rcdb/v1/messages',
             data:{
               fromName: name,
               fromEmail: email,

@@ -37,9 +37,6 @@ const IndexPage = () => {
   var sizeCases = query.allWordpressAcfUsecase.nodes.length
 
   useEffect(() => {
-  //   $('#hamburgermenu').click(function(){
-  //     $('#navigation').slideToggle().css("display","flex");
-  //   })
 
       var menu = document.querySelector("#navigation");
       var button = document.querySelector('#hamburgermenu').addEventListener("click", _ => menu.classList.toggle('is-active'))
@@ -216,7 +213,7 @@ const IndexPage = () => {
 
                 <li
                 onClick={() => {
-                  _fullpageApi.moveTo(4)
+                  _fullpageApi.moveTo(5)
                 }}
               >
                 Contact
@@ -225,7 +222,7 @@ const IndexPage = () => {
                 
             <li
             onClick={() => {
-              _fullpageApi.moveTo(5)
+              _fullpageApi.moveTo(4)
             }}
           >
             Contact
