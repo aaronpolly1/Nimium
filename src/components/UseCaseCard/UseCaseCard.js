@@ -1,7 +1,7 @@
 import React from "react";
 import './UseCaseCard.css';
 import { Link } from "gatsby";
-
+import { Textfit } from 'react-textfit';
 
 const UseCaseCard = props => {
 
@@ -15,7 +15,12 @@ const UseCaseCard = props => {
         <img src={props.case.acf.main_image.source_url}></img>
       </div>
       <div className="caseDescription">
-      <p>{props.case.acf.summary}</p>
+      
+      <Textfit mode="multi" >
+      {props.case.acf.summary}
+      </Textfit>
+     
+   
       <Link
       to={"/usecases/" +props.case.wordpress_id}>Read More</Link>  
       </div>
