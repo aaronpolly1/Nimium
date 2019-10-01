@@ -196,7 +196,7 @@ const IndexPage = () => {
               Who Are We
             </li>
 
-            {sizeCases > 3 ? (
+            {sizeCases >= 3 ? (
               <li
                 onClick={() => {
                   _fullpageApi.moveTo(4)
@@ -209,7 +209,7 @@ const IndexPage = () => {
             )}
 
             {
-              sizeCases > 3 ? (
+              sizeCases >= 3 ? (
 
                 <li
                 onClick={() => {
@@ -253,7 +253,7 @@ const IndexPage = () => {
                 <div className="section">
                   <WhoWeAreSection />
                 </div>
-                {sizeCases > 3 ? (
+                {sizeCases >= 3 ? (
                   <div className="section">
                     <CaseSection />
                   </div>

@@ -3,21 +3,21 @@ import { relative } from "path";
 
 const hrStyle = {
 
-    border: " 3px solid #D19900",
-    width:"35%",
+    border: " 1px solid #D19900",
+    width:"15%",
     position:"relative",
     margin:"0"
 
 }
 
 const numberStyle = {
-    fontSize:"8rem",
+    fontSize:"5em",
 }
 
 const subTitleStyle = {
     color:"white",
-    fontSize:"1.5rem",
-    marginBottom:"1rem"
+    fontSize:"1em",
+    marginBottom:"1em"
 }
 
 const CounterContainer = {
