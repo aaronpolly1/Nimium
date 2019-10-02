@@ -134,7 +134,9 @@ const IndexPage = () => {
 
         <nav className="navigationContainer" id="navigation" >
           
-          <div className="verticalLine"></div>
+          <div className="verticalLine" style={{flexGrow:"0.1"}}></div>
+          <h1 style={{alignSelf:"center", fontSize:'3rem'}}>NIMIUM</h1>
+          <div className="verticalLine" style={{flexGrow:"0.5"}}></div>
           <ul>
             <li
               onClick={() => {
