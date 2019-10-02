@@ -10,8 +10,16 @@ const UseCaseCard = props => {
   return (
     <div className="case">
       <div className="caseHeader">
+        <Textfit mode="single">
         <h3>{props.case.acf.name}</h3>
+
+        </Textfit>
+        <Textfit mode="single">
+
+          
         <p>{props.case.acf.function}</p>
+</Textfit>
+     
         <img src={props.case.acf.main_image.source_url}></img>
       </div>
       <div className="caseDescription">

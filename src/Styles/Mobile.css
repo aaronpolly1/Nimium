@@ -16,6 +16,17 @@
         padding-left: 0 !important;
     }
     
+    .caseScroller{
+
+        width: 120%;
+        margin-left: -13%;
+    }
+
+    .case
+    {
+        width: 48% !important;
+    }
+    
 
     form div > div {
         border:none !important;
@@ -23,7 +34,7 @@
 
     .StatsContainer  span 
     {
-        font-size: 4rem !important;
+        font-size: 2rem !important;
     }
 
     .fullpage-wrapper

@@ -24,7 +24,7 @@
 
         .case
         {
-            width: 40% !important;
+            width: 40% ;
             margin: 1% !important;
             position: relative;
 
@@ -66,7 +66,7 @@
 
     .sectionContainer {
     
-        padding-top: 7vh;
+        padding-top: 5% !important;
     }
 
     .caseContainer
