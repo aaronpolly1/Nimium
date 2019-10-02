@@ -199,9 +199,12 @@ const IndexPage = () => {
         
       
         <ReactFullpage
+    
           //fullpage options
           licenseKey={"YOUR_KEY_HERE"}
           scrollingSpeed={1000} /* Options here */
+          responsiveWidth={425}
+          scrollHorizontally={false}
           render={({ state, fullpageApi }) => {
             _fullpageApi = fullpageApi
             return (
