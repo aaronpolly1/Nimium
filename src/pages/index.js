@@ -40,6 +40,9 @@ const IndexPage = () => {
 
       var menu = document.querySelector("#navigation");
       var button = document.querySelector('#hamburgermenu').addEventListener("click", _ => menu.classList.toggle('is-active'))
+      var menuItems = document.querySelectorAll('li').forEach((item)=>{
+          item.addEventListener("click", _ => menu.classList.toggle('is-active'))
+      })
   },[]);
 
   return (
@@ -135,7 +138,7 @@ const IndexPage = () => {
         <nav className="navigationContainer" id="navigation" >
           
           <div className="verticalLine" style={{flexGrow:"0.1"}}></div>
-          <h1 style={{alignSelf:"center", fontSize:'3rem'}}>NIMIUM</h1>
+          <h1 style={{alignSelf:"center", fontSize:'3rem', textAlign:"center"}}>NIMIUM</h1>
           <div className="verticalLine" style={{flexGrow:"0.5"}}></div>
           <ul>
             <li
