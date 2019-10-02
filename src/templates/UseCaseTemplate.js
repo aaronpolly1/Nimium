@@ -11,6 +11,7 @@ import { Icon } from "semantic-ui-react"
 const UseCaseTemplate = ({ data, location, pageContext }) => {
 
 
+  console.log(data.wordpressAcfUsecase)
 
 
   return (
@@ -130,18 +131,20 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
         />
       </div>
       <div className="fullscreenDetailLeft">
+      <h1 className="mobileTitle">{data.wordpressAcfUsecase.acf.name}</h1>
         <img
           height="100%"
           width="100%"
           src={data.wordpressAcfUsecase.acf.main_image.source_url}
         ></img>
       </div>
+      
       <div className="fullscreenDetailRight">
         <Link to="/">
             <IoIosArrowRoundBack size="5em"/>
         </Link>
 
-        <h1>{data.wordpressAcfUsecase.acf.title}</h1>
+        <h1>{data.wordpressAcfUsecase.acf.name}</h1>
         <div className="contentContainer">
           <div
             className="useCaseContent"

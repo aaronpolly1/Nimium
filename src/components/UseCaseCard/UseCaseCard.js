@@ -8,7 +8,7 @@ const UseCaseCard = props => {
 
   return (
     <div className="case">
-      <Link>
+      <Link to={"/usecases/" + props.case.wordpress_id}>
         <div className="caseHeader">
           <h3>{props.case.acf.name}</h3>
 

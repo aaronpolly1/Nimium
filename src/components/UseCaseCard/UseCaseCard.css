@@ -41,6 +41,12 @@
     .case a 
     {
       margin-top: 5px;
+      color:white
+    }
+
+    .case a:visited
+    {
+      color:white;
     }
 
   .caseHeader h3 {
