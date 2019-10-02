@@ -57,7 +57,7 @@ const IndexPage = () => {
                   },
                 },
                 color: {
-                  value: "#caca37",
+                  value: "#9c7409",
                 },
                 shape: {
                   type: "edge",
@@ -75,7 +75,7 @@ const IndexPage = () => {
                   },
                 },
                 opacity: {
-                  value: 0.20517838682439088,
+                  value: 0.30517838682439088,
                   random: false,
                   anim: {
                     enable: false,
@@ -108,7 +108,7 @@ const IndexPage = () => {
                   random: true,
                   straight: false,
                   out_mode: "out",
-                  bounce: false,
+                  bounce: true,
                   attract: {
                     enable: false,
                     rotateX: 600,
@@ -116,45 +116,7 @@ const IndexPage = () => {
                   },
                 },
               },
-              interactivity: {
-                detect_on: "canvas",
-                events: {
-                  onhover: {
-                    enable: false,
-                    mode: "repulse",
-                  },
-                  onclick: {
-                    enable: true,
-                    mode: "push",
-                  },
-                  resize: true,
-                },
-                modes: {
-                  grab: {
-                    distance: 400,
-                    line_linked: {
-                      opacity: 1,
-                    },
-                  },
-                  bubble: {
-                    distance: 400,
-                    size: 40,
-                    duration: 2,
-                    opacity: 8,
-                    speed: 3,
-                  },
-                  repulse: {
-                    distance: 200,
-                    duration: 0.4,
-                  },
-                  push: {
-                    particles_nb: 4,
-                  },
-                  remove: {
-                    particles_nb: 2,
-                  },
-                },
-              },
+              
               retina_detect: true,
             }}
           />
