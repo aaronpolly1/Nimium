@@ -22,6 +22,11 @@
         margin-left: -13%;
     }
 
+    .subDescription
+    {
+        width: 100% !important;
+    }
+
     .case
     {
         width: 48% !important;

@@ -30,7 +30,7 @@ const SectionHeader = props => {
       <h1 style={titleStyle}>{props.title}</h1>
       <hr style={hrStyle} />
       <br></br>
-      {(props.subDescription)?(  <p style={subDescriptionStyle}>{props.subDescription}</p>):(undefined) }
+      {(props.subDescription)?(  <p className="subDescription" style={subDescriptionStyle}>{props.subDescription}</p>):(undefined) }
    
     </React.Fragment>
   );
