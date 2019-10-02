@@ -34,9 +34,15 @@
     width: 200px;
     position: absolute;
     top:0;
+    filter: brightness(60%);
     z-index: -1;
   }
   
+    .case a 
+    {
+      margin-top: 5px;
+    }
+
   .caseHeader h3 {
     font-weight: bold;
     font-size: 1.5rem;
