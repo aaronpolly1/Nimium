@@ -110,6 +110,11 @@ body {
     padding-left: 0px;
   }
 
+
+  .timeline p {
+    font-size: 0.8em;
+  }
+
   /*Cases*/
 
   .caseContainer {

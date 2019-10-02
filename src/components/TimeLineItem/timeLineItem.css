@@ -28,7 +28,9 @@
     background:#D19900;
     display: flex;
     flex-direction: column;
-    top:30px;
+    top:60px;
+    width: 120%;
+    margin-left: -15%;
   }
    
   .timeline ul li div::before {
@@ -44,7 +46,7 @@
   }
    
   .timeline ul li:nth-child(odd) div::before {
-    top: -90px;
+    margin-top: 40px;
     border-width: 8px 16px 8px 0;
     border-color: transparent #F45B69 transparent transparent;
   }
