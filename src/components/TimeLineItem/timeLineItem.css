@@ -42,7 +42,7 @@
   }
   
   .timeline ul li:nth-child(odd) div {
-    top: -200px;
+    top: -160px;
   }
    
   .timeline ul li:nth-child(odd) div::before {
