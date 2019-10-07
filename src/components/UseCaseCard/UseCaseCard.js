@@ -21,7 +21,7 @@ const UseCaseCard = props => {
       <div className="caseDescription">
         <Textfit mode="multi">{props.case.acf.summary}</Textfit>
 
-        <Link to={"/usecases/" + props.case.wordpress_id}>Read More</Link>
+        <Link  className="readmore" to={"/usecases/" + props.case.wordpress_id}>Read More</Link>
       </div>
     </div>
   )

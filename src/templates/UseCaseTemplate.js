@@ -103,7 +103,7 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
       
       <div className="fullscreenDetailRight">
         <Link to="/">
-            <IoIosArrowRoundBack size="5em"/>
+            <IoIosArrowRoundBack className="backbutton" size="5em"/>
         </Link>
 
         <h1>{data.wordpressAcfUsecase.acf.name}</h1>

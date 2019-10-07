@@ -176,6 +176,11 @@ body {
 
   }
 
+  nav li:hover, button
+  {
+    cursor: pointer;
+    
+  }
 
 
 
@@ -190,7 +195,7 @@ body {
     background-color: #D19900;
     border: none;
     color: white;
-    padding: 1% 2%;
+    padding: 1em;
 
   }
 

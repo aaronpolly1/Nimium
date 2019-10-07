@@ -37,10 +37,11 @@ body
   }
 
   .contentContainer {
-      height: 75vh;
+      height: 60vh;
       max-height: 80vh;
       overflow: scroll;
       overflow-x: hidden;
+      margin-bottom:5%;
   }
 
   .contentContainer::-webkit-scrollbar {
@@ -59,7 +60,9 @@ body
 
   .useCaseContent {
 
-      height: 80vh;
+      height: 70vh;
+      padding-right: 3%;
+
   }
 
   #particles-js {
@@ -77,6 +80,11 @@ body
     color:#FFC21C;
     text-decoration-line: none;
     font-weight: bold;
+  }
+
+  .backbutton
+  {
+    margin-left: -20px;
   }
 
   @media only screen and (max-width: 425px) {

@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-import { FaBars } from "react-icons/all"
+import { MdMenu } from "react-icons/all"
 
 //External Libraries
 import ReactFullpage from "@fullpage/react-fullpage"
@@ -129,7 +129,7 @@ const IndexPage = () => {
         <div className="mobilebar">
             <div className="hamburger">
               <div id="hamburgermenu">
-              <FaBars size="3em" />
+              <MdMenu size="3em" />
               </div>
             </div>
           </div>
@@ -138,8 +138,8 @@ const IndexPage = () => {
         <nav className="navigationContainer" id="navigation" >
           
           <div className="verticalLine" style={{flexGrow:"0.1"}}></div>
-          <h1 style={{alignSelf:"center", fontSize:'3rem', textAlign:"center"}}>NIMIUM</h1>
-          <div className="verticalLine" style={{flexGrow:"0.5"}}></div>
+          <h1 style={{alignSelf:"center", textAlign:"center"}}>NIMIUM</h1>
+          <div className="verticalLine" style={{flexGrow:"0.2"}}></div>
           <ul>
             <li
               onClick={() => {

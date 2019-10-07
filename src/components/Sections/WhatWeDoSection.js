@@ -27,7 +27,7 @@ const WhatWeDoSection = props => {
           subDescription="We overcome business obstacles. You set the goal(s), we put a team together, define a strategy and get things done. "
         />
         <h2>COME AGAIN?</h2>
-        <p>
+        <p style={{width:'75%'}}>
           We are all about diversity. Want to increase sales? Reduce churn?
           Rebrand your business? Optimize & automate internal processes? Or find
           the best way to outrun your competitors?{" "}
