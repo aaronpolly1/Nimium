@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
+.svg
+{
+  filter: invert(1);
+  padding-bottom: 0%;
+  padding-top: 0%;
+  padding-left: 15%;
+  padding-right: 15%;
+  box-sizing: border-box;
+  object-fit: fill;
+}
 
 body{
   background-color: black
@@ -199,6 +209,7 @@ body {
     border: none;
     color: white;
     padding: 1em;
+    font-weight: 600;
 
   }
 
@@ -210,3 +221,16 @@ body {
     box-sizing: border-box;
   }
 
+
+  textarea::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  textarea::-webkit-scrollbar-track {
+    background: black; 
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background: #FFC21C;
+    border-radius: 10px;
+  }

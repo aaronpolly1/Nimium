@@ -29,7 +29,7 @@ const CaseSection = props => {
   
 
   return (
-    <div className="sectionContainer">
+    <div className="sectionContainer " id='usecaseSection'>
       <SectionHeader title="DISCOVER OUR CASES" />
       <br></br>
       <div className="caseScroller">

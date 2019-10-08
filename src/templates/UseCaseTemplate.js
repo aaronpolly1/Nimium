@@ -102,7 +102,7 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
       </div>
       
       <div className="fullscreenDetailRight">
-        <Link to="/">
+        <Link to="/#CaseSection">
             <IoIosArrowRoundBack className="backbutton" size="5em"/>
         </Link>
 
@@ -116,12 +116,12 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
           ></div>
         </div>
         {
-          (pageContext.previousCase)?(   <Link to={"/usecases/" + pageContext.previousCase.wordpress_id}>
+          (pageContext.previousCase)?(   <Link activeClassName={"usecaseSection"} className="otherPageLink" to={"/usecases/" + pageContext.previousCase.wordpress_id}>
           Previous Case{" "}
         </Link>):(undefined)
         }
         {
-          (pageContext.nextCase)?(        <Link to={"/usecases/" + pageContext.nextCase.wordpress_id}>Next Case</Link>
+          (pageContext.nextCase)?(        <Link className="otherPageLink" to={"/usecases/" + pageContext.nextCase.wordpress_id}>Next Case</Link>
           ):(undefined)
         }
      

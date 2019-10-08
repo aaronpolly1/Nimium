@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 
 import { MdMenu } from "react-icons/all"
 
+import logoFulll from "../assets/logoFull.svg";
 //External Libraries
 import ReactFullpage from "@fullpage/react-fullpage"
 
@@ -43,6 +44,15 @@ const IndexPage = () => {
       var menuItems = document.querySelectorAll('li').forEach((item)=>{
           item.addEventListener("click", _ => menu.classList.toggle('is-active'))
       })
+
+
+      // var urlParams = new URLSearchParams(window.location.search);
+      // if(urlParams.has('section'))
+      // {
+    
+      //   document.getElementById(urlParams.get('section')).scrollIntoView();
+      // }
+
   },[]);
 
   return (
@@ -138,8 +148,8 @@ const IndexPage = () => {
         <nav className="navigationContainer" id="navigation" >
           
           <div className="verticalLine" style={{flexGrow:"0.1"}}></div>
-          <h1 style={{alignSelf:"center", textAlign:"center"}}>NIMIUM</h1>
-          <div className="verticalLine" style={{flexGrow:"0.2"}}></div>
+          <img src={logoFulll} className="svg"></img>
+          <div className="verticalLine" style={{flexGrow:"0.3"}}></div>
           <ul>
             <li
               onClick={() => {
@@ -209,6 +219,7 @@ const IndexPage = () => {
           licenseKey={"YOUR_KEY_HERE"}
           scrollingSpeed={1000} /* Options here */
           responsiveWidth={425}
+          anchors={['homesection','whatweDoSection','WhoWeAreSection','CaseSection','ContactSection']}
           scrollHorizontally={false}
           render={({ state, fullpageApi }) => {
             _fullpageApi = fullpageApi

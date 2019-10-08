@@ -28,6 +28,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+          rule: {
+            include: /assets/
+          }
+      }
+  },
+    {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your wordpress source

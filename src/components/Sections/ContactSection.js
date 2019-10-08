@@ -83,6 +83,7 @@ const ContactSection = props => {
             style={{
               width: "60%",
               paddingLeft: "5%",
+              marginTop:"4px",
             }}
           >
             <TextField
@@ -91,7 +92,7 @@ const ContactSection = props => {
               multiline={true}
               name="message"
               fullWidth
-              rowsMax={8}
+              rowsMax={5}
               className={classes.input}
               onChange={e => {
                 message = e.target.value
