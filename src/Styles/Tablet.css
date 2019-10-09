@@ -112,3 +112,11 @@
 
     
   }
+
+  @media only screen and (max-height: 700px) {
+    .sectionContainer {
+ 
+        padding-top: 2% !important;
+      }
+    
+  }
