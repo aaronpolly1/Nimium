@@ -28,11 +28,11 @@ const timeLineItem = props => {
         {(index + 1) % 2 == 0 ? (
           <div className="timelineContentBox">
               <span>{step.title}</span>
-            <p
+            <span
               dangerouslySetInnerHTML={{
                 __html: step.excerpt,
               }}
-            ></p>
+            ></span>
           </div>
         ) : (
           undefined
