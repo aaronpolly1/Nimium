@@ -24,7 +24,9 @@ export default function HTML(props) {
 
         <script type="text/javascript"  src="baseFunction.js"></script>
 
-      
+        <link rel="stylesheet" href="https://use.typekit.net/lzj0udm.css"></link>
+
+
 
       </head>
       <body {...props.bodyAttributes}>
