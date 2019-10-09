@@ -249,7 +249,7 @@ const IndexPage = () => {
             )
           }}
         />
-        }
+        
       </React.Fragment>
     </Layout>
   )
