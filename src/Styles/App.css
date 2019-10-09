@@ -85,7 +85,6 @@ body {
 
 
   .fullPageBackground {
-    background-color: purple;
     display: inline-block;
   }
 
@@ -128,6 +127,8 @@ body {
   .caseContainer {
     display: flex;
     width: max-content;
+    margin-bottom:10px;
+
   }
 
 
@@ -226,3 +227,27 @@ body {
     background: #FFC21C;
     border-radius: 10px;
   }
+
+  .caseScroller
+  {
+    overflow-y: hidden;
+  }
+  
+  .caseScroller::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  
+  .caseScroller::-webkit-scrollbar-track {
+    background: black; 
+  }
+
+  
+  .caseScroller::-webkit-scrollbar-thumb {
+    background: #FFC21C;
+    border-radius: 10px;
+  }
+
+
+  
+

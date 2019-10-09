@@ -1,5 +1,6 @@
 import React from "react"
 import { relative } from "path";
+import CountUp from 'react-countup';
 
 const hrStyle = {
 
@@ -25,14 +26,35 @@ const CounterContainer = {
     color:"#D19900"
 }
 
+
+function showNumbers () 
+{
+    return(<div>ok</div>)
+}
+
+
 const StatsContainer = (props) => {
 
   
-    const { number,subtitle } = props;
+    
+
+    const { number,subtitle,visible, operator } = props;
+    console.log(visible)
 
     return (
+       
+        
+        
+
+
         <div style={CounterContainer}>
-            <span style={numberStyle}>{number}</span>
+              
+            {
+                (visible)?(<CountUp style={numberStyle} end={number} ></CountUp>):(<span style={numberStyle}>-</span>)
+            }
+            {
+                (operator)?(<span style={numberStyle}>{operator}</span>):(undefined)
+            }
             <p style={subTitleStyle}>{subtitle}</p>
             <hr style={hrStyle}/>
         </div>
@@ -41,3 +63,5 @@ const StatsContainer = (props) => {
 }
 
 export default StatsContainer;
+
+     {/* <span style={numberStyle}>{number}</span> */}

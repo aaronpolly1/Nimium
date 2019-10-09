@@ -3,7 +3,11 @@ import SectionHeader from "../SectionHeader";
 
 import StatsContainer from "../StatsContainer";
 
+import VisibilitySensor from "react-visibility-sensor"
+
 const WhoWeAreSection = props => {
+
+
   return (
     <div className="sectionContainer">
       <SectionHeader
@@ -13,9 +17,18 @@ const WhoWeAreSection = props => {
 
       <br></br>
       <div className="StatsContainer">
-       
-       <StatsContainer subtitle="consultants" number="20+" />
-       <StatsContainer subtitle="companies served" number="30" />  <StatsContainer subtitle="problems solved" number="153+"/>
+      <VisibilitySensor >
+      {({isVisible}) =>
+      <React.Fragment>
+           <StatsContainer subtitle="consultants" number={30} operator="+" visible={isVisible} />
+           <StatsContainer subtitle="companies served" number={30}  visible={isVisible} /> 
+           <StatsContainer subtitle="problems solved" number={150} operator="+" visible={isVisible} />
+           </React.Fragment>
+      }
+      </VisibilitySensor>
+     
+   
+
 
       </div>
     </div>
