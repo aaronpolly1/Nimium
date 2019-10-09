@@ -2,15 +2,15 @@
 
   .timeLineItemContainer
   {
-    height: 50vh;
+    height: 45vh;
     box-sizing: content-box;
-    padding-bottom: 4%;
+    padding-bottom: 1%;
   }
 
 
   .timeStepUpContainer
   {
-    height: 50%;
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@
 
   .timeStepDownContainer
   {
-    height: 50%;
+    height: 40%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,9 +33,9 @@
   .timelineContentBox
   {
     background-color: orange;
-    padding: 5%;
+    padding: 4%;
     overflow-wrap: break-word;
-    max-width: 500px;
+    max-width: 400px;
   }
 
   .timelinescroller
@@ -51,6 +51,14 @@
     width:max-content;
   }
 
+  .timelineContentBox .title {
+    font-weight: bolder;
+  }
+
+  .timelineContentBox .content 
+  {
+    font-size: 0.8em
+  }
   
 
   span.number {

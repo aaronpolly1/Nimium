@@ -9,8 +9,8 @@ const timeLineItem = props => {
       <div className="timeStepUpContainer">
       {(index + 1) % 2 != 0 ? (
           <div className="timelineContentBox">
-              <span>{step.title}</span>
-            <span
+              <span className="title">{step.title}</span>
+            <span className="content"
               dangerouslySetInnerHTML={{
                 __html: step.excerpt,
               }}
@@ -27,8 +27,8 @@ const timeLineItem = props => {
       <div className="timeStepDownContainer">
         {(index + 1) % 2 == 0 ? (
           <div className="timelineContentBox">
-              <span>{step.title}</span>
-            <span
+              <span className="title">{step.title}</span>
+            <span className="content"
               dangerouslySetInnerHTML={{
                 __html: step.excerpt,
               }}
@@ -44,15 +44,3 @@ const timeLineItem = props => {
 
 export default timeLineItem
 
-{
-  /* <li>
-<span className="number">{index+1}</span>
-<div>
-  
-  <span>{step.title}</span>
-  <span dangerouslySetInnerHTML={{
-        __html: step.excerpt,
-      }}></ span>
-</div>
-</li> */
-}
