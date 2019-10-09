@@ -49,7 +49,7 @@ body
   }
 
   .contentContainer::-webkit-scrollbar-track {
-    background: black; 
+    background: #0c0903; 
   }
 
   .contentContainer::-webkit-scrollbar-thumb {
@@ -70,7 +70,7 @@ body
 
   #particles-js {
     position: absolute;
-    background-color: black;
+    background-color: #0c0903;
     width: 100%;
     height: 100vh;
   }
