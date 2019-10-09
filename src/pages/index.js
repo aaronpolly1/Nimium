@@ -81,11 +81,7 @@ const IndexPage = () => {
                   polygon: {
                     nb_sides: 5,
                   },
-                  image: {
-                    src: "img/github.svg",
-                    width: 100,
-                    height: 100,
-                  },
+            
                 },
                 opacity: {
                   value: 0.30517838682439088,
@@ -156,21 +152,21 @@ const IndexPage = () => {
                 _fullpageApi.moveTo(1)
               }}
             >
-              Home
+              HOME
             </li>
             <li
               onClick={() => {
                 _fullpageApi.moveTo(2)
               }}
             >
-              What Do We Do
+              WHAT WE DO
             </li>
             <li
               onClick={() => {
                 _fullpageApi.moveTo(3)
               }}
             >
-              Who Are We
+              WHO WE ARE
             </li>
 
             {sizeCases >= 3 ? (
@@ -179,7 +175,7 @@ const IndexPage = () => {
                   _fullpageApi.moveTo(4)
                 }}
               >
-                Cases
+                CASES
               </li>
             ) : (
               undefined
@@ -193,7 +189,7 @@ const IndexPage = () => {
                   _fullpageApi.moveTo(5)
                 }}
               >
-                Contact
+                CONTACT
               </li>
               ):(
                 
@@ -202,7 +198,7 @@ const IndexPage = () => {
               _fullpageApi.moveTo(4)
             }}
           >
-            Contact
+            CONTACT
           </li>
               )
             }

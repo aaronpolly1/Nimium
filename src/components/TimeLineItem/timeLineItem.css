@@ -35,7 +35,7 @@
     background-color: orange;
     padding: 4%;
     overflow-wrap: break-word;
-    max-width: 400px;
+    max-width: 300px;
   }
 
   .timelinescroller
@@ -55,22 +55,26 @@
     font-weight: bolder;
   }
 
-  .timelineContentBox .content 
+  .timelineContentBox .content p
   {
-    font-size: 0.8em
+    font-size: 0.8em;
+    margin-top:2px;
   }
+
+  
   
 
   span.number {
     font-size: 3rem;
     width: 10%;
     text-align: center;
+    color: #FFC21C;
   }
 
   .stepLine .line {
-    background: white;
+    background: #707070 ;
     width: 100%;
-    height: 5px;
+    height: 1px;
   }
 
   
@@ -80,7 +84,7 @@
 
   
   .timelinescroller::-webkit-scrollbar-track {
-    background: black; 
+    background:  rgb(12, 9, 3);; 
   }
 
   

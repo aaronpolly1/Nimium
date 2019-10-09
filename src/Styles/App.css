@@ -12,7 +12,7 @@
 }
 
 body{
-  background-color: black
+  background-color:  rgb(12, 9, 3);
 }
 
 .mobilebar {
@@ -44,7 +44,7 @@ img
     float: left;
     position: absolute;
     height: 100vh;
-    background-color: black;
+    background-color: rgb(12, 9, 3);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,7 +90,7 @@ body {
 
   #particles-js {
     position: absolute;
-    background-color: black;
+    background-color: rgb(12, 9, 3);
     width: 100%;
     height: 100vh;
   }
@@ -112,6 +112,10 @@ body {
     font-size: 1.5rem;
     text-align: center;
     list-style: none;
+  }
+
+  nav li:hover {
+   font-weight: bold;
   }
 
   nav ul 
@@ -220,7 +224,7 @@ body {
   }
 
   textarea::-webkit-scrollbar-track {
-    background: black; 
+    background: rgb(12, 9, 3);
   }
 
   textarea::-webkit-scrollbar-thumb {
@@ -239,7 +243,7 @@ body {
 
   
   .caseScroller::-webkit-scrollbar-track {
-    background: black; 
+    background:  rgb(12, 9, 3);
   }
 
   

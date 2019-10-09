@@ -13,7 +13,7 @@ const titleStyle = {
 const hrStyle = {
   width: "10%",
   float: "left",
-  height: "7px",
+  height: "5px",
   backgroundColor: "#FFC21C",
   border: "none"
 };
