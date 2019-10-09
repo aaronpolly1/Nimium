@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 
 import { MdMenu } from "react-icons/all"
 
-import logoFulll from "../assets/logoFull.svg";
+import LogoFulll from "../assets/logoFull.svg";
 //External Libraries
 import ReactFullpage from "@fullpage/react-fullpage"
 
@@ -148,7 +148,7 @@ const IndexPage = () => {
         <nav className="navigationContainer" id="navigation" >
           
           <div className="verticalLine" style={{flexGrow:"0.1"}}></div>
-          {/* <Image  className="svg"></Image> */}
+         <LogoFulll className="svg"/>
           <div className="verticalLine" style={{flexGrow:"0.3"}}></div>
           <ul>
             <li
