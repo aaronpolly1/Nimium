@@ -219,9 +219,8 @@ const IndexPage = () => {
           licenseKey={"YOUR_KEY_HERE"}
           scrollingSpeed={1000} /* Options here */
           responsiveWidth={425}
-          responsiveSlides={true}
+          normalScrollElements={'.timelinescroller , .timeline'}
           anchors={['homesection','whatweDoSection','WhoWeAreSection','CaseSection','ContactSection']}
-          scrollHorizontally={false}
           render={({ state, fullpageApi }) => {
             _fullpageApi = fullpageApi
             return (
@@ -229,7 +228,7 @@ const IndexPage = () => {
                 <div className="section">
                   <HomeSection />
                 </div>
-                <div className="section" id="whatweDoSection">
+                <div className="section" id="whatweDoSection2">
                   <WhatWeDoSection fullpageApi={fullpageApi} />
                 </div>
                 <div className="section">
