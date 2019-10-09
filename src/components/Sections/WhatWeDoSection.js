@@ -21,7 +21,7 @@ const WhatWeDoSection = props => {
 
   return (
     <div class="slide">
-      <div className="sectionContainer" id="whatweDoSection" >
+      <div className="sectionContainer"  >
         <SectionHeader
           title="THIS IS WHAT DO WE DO"
           subDescription="We overcome business obstacles. You set the goal(s), we put a team together, define a strategy and get things done. "
