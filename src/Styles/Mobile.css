@@ -49,4 +49,13 @@
     }
 
 
+    #whatweDoSection
+    {
+        height: auto !important;
+    }
+
+    .fp-slides
+    {
+        height: auto;
+    }
   }

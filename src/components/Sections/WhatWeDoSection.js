@@ -21,7 +21,7 @@ const WhatWeDoSection = props => {
 
   return (
     <div class="slide">
-      <div className="sectionContainer" >
+      <div className="sectionContainer" id="whatweDoSection" >
         <SectionHeader
           title="THIS IS WHAT DO WE DO"
           subDescription="We overcome business obstacles. You set the goal(s), we put a team together, define a strategy and get things done. "
@@ -48,14 +48,12 @@ const WhatWeDoSection = props => {
             subDescription="Tackling business challenges, we follow these steps: "
           />
 
-          <div className="container">
+          <div className="timelinescroller">
           
               <section class="timeline">
-                <ul>
                   {query.allWordpressWpWorkingsteps.edges.map((step, index) => {
                     return <TimeLineItem step={step.node} index={index} />
                   })}
-                </ul>
               </section>
             </div>
         </div>

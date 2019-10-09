@@ -148,7 +148,7 @@ const IndexPage = () => {
         <nav className="navigationContainer" id="navigation" >
           
           <div className="verticalLine" style={{flexGrow:"0.1"}}></div>
-          <img src={logoFulll} className="svg"></img>
+          {/* <Image  className="svg"></Image> */}
           <div className="verticalLine" style={{flexGrow:"0.3"}}></div>
           <ul>
             <li
@@ -219,6 +219,7 @@ const IndexPage = () => {
           licenseKey={"YOUR_KEY_HERE"}
           scrollingSpeed={1000} /* Options here */
           responsiveWidth={425}
+          responsiveSlides={true}
           anchors={['homesection','whatweDoSection','WhoWeAreSection','CaseSection','ContactSection']}
           scrollHorizontally={false}
           render={({ state, fullpageApi }) => {
@@ -228,7 +229,7 @@ const IndexPage = () => {
                 <div className="section">
                   <HomeSection />
                 </div>
-                <div className="section">
+                <div className="section" id="whatweDoSection">
                   <WhatWeDoSection fullpageApi={fullpageApi} />
                 </div>
                 <div className="section">
