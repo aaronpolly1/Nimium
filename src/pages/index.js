@@ -103,7 +103,7 @@ const IndexPage = () => {
                   random: false,
                   anim: {
                     enable: false,
-                    speed: 15,
+                    speed: 105,
                     size_min: 6.496617698410762,
                     sync: true,
                   },
@@ -117,7 +117,7 @@ const IndexPage = () => {
                 },
                 move: {
                   enable: true,
-                  speed: 6,
+                  speed: 10,
                   direction: "none",
                   random: true,
                   straight: false,

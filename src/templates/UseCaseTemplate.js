@@ -7,11 +7,10 @@ import Layout from "../components/layout"
 import Link from "gatsby-link"
 import { IoIosArrowRoundBack } from "react-icons/all";
 import { Icon } from "semantic-ui-react"
+import SectionHeader from "../components/SectionHeader";
 
 const UseCaseTemplate = ({ data, location, pageContext }) => {
 
-
-  console.log(data.wordpressAcfUsecase)
 
 
   return (
@@ -93,7 +92,13 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
           />
       </div>
       <div className="fullscreenDetailLeft">
-      <h1 className="mobileTitle">{data.wordpressAcfUsecase.acf.name}</h1>
+      <div className="mobileTitle" style={{padding:"5%", paddingLeft:"10%"}}>
+      <Link to="/#CaseSection">
+            <IoIosArrowRoundBack className="backbutton" size="5em"/>
+        </Link>
+      <SectionHeader title={data.wordpressAcfUsecase.acf.name} />
+
+      </div>
         <img
           height="100%"
           width="100%"
@@ -105,8 +110,10 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
         <Link to="/#CaseSection">
             <IoIosArrowRoundBack className="backbutton" size="5em"/>
         </Link>
+        <div className="normalTitle" >
+      <SectionHeader title={data.wordpressAcfUsecase.acf.name} />
 
-        <h1>{data.wordpressAcfUsecase.acf.name}</h1>
+      </div>
         <div className="contentContainer">
           <div
             className="useCaseContent"
@@ -145,6 +152,6 @@ export const query = graphql`
           source_url
         }
       }
-    }
+    }                                           
   }
 `

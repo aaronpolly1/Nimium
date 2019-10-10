@@ -90,12 +90,28 @@ body
     margin-left: -20px;
   }
 
-  @media only screen and (max-width: 425px) {
+  .mobileTitle
+  {
+    display: none; 
+  }
+
+  @media only screen and (max-width: 425px) {      
+
+    .mobileTitle
+    {
+      display: block
+    }
+
+    .normalTitle
+    {
+
+      display: none;
+    }
 
     .fullscreenDetailLeft {
 
       position: relative !important;
-      height: 35vh !important;
+      height: 70vh !important;
       width: 100% !important;
       overflow: hidden;
     }
@@ -132,5 +148,18 @@ body
     box-sizing: border-box;
   }
 
-    
+    hr
+    {
+      margin-bottom: 8%;
+      margin-top: -5px;
+    }
+
+    .backbutton
+    {
+      margin-left: -10px !important;
+      height: 2em !important;
+      width: 2em !important;
+  
+    }
+  
   }
