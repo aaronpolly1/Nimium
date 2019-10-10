@@ -38,6 +38,8 @@
         border:none !important;
         width: 100% !important;
         padding-left: 0% !important;
+        padding-right: 5% !important;
+        box-sizing: border-box !important;
 
     }
 
@@ -48,8 +50,8 @@
 
 
     form button {
-        margin-top: 10%;
-        width: 100%;
+        margin-top: 10% !important;
+        width: 90% !important;
     }
     .StatsContainer  span 
     {
