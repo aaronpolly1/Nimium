@@ -41,6 +41,11 @@
 
     }
 
+    #particles-js
+    {
+        position: fixed;
+    }
+
 
     form button {
         margin-top: 10%;
@@ -57,6 +62,15 @@
         padding-right: 5%;
     }
 
+    .sectionContainer
+    {
+    margin: 1rem 0.1rem;
+
+    }
+
+    #timelinesection {
+        padding-left: 0.5%;
+    }
 
     #whatweDoSection2
     {

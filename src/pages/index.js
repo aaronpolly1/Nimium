@@ -59,11 +59,11 @@ const IndexPage = () => {
     <Layout>
       <React.Fragment>
         <div id="particles-js">
-          <Particles
+        <Particles
             params={{
               particles: {
                 number: {
-                  value: 5,
+                  value: 3,
                   density: {
                     enable: false,
                     value_area: 1037,
@@ -73,15 +73,20 @@ const IndexPage = () => {
                   value: "#9c7409",
                 },
                 shape: {
-                  type: "edge",
-                  stroke: {
-                    width: 0,
-                    color: "#ffffff",
-                  },
-                  polygon: {
-                    nb_sides: 5,
-                  },
-            
+                  type:'images',
+                  images:[
+                    {
+                      src: '../../squareborder.png',
+                      width:100,
+                      height:100
+                    
+                    },
+                    {
+                      src: '../../squarerotated.png',
+                      width:100,
+                      height:100,
+                  }
+                  ]
                 },
                 opacity: {
                   value: 0.30517838682439088,
@@ -125,10 +130,11 @@ const IndexPage = () => {
                   },
                 },
               },
-              
+
               retina_detect: true,
             }}
           />
+          
         </div>
         
      
