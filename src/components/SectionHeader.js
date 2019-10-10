@@ -6,7 +6,8 @@ const titleStyle = {
   fontSize: "3rem",
   marginBottom: "5px",
   width:"70%",
-  lineHeight:"4rem"
+  lineHeight:"4rem",
+  marginTop:'0%'
 
 };
 

@@ -2,7 +2,7 @@
 
   .timeLineItemContainer
   {
-    height: 45vh;
+    height: 50vh;
     box-sizing: content-box;
     padding-bottom: 1%;
   }
@@ -12,12 +12,12 @@
   {
     height: 40%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
   }
 
   .stepLine {
-    height: 15%;
+    height: 25%;
     display: flex;
     align-items: center;
   }
@@ -26,8 +26,8 @@
   {
     height: 40%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .timelineContentBox

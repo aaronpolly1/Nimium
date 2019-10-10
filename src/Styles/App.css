@@ -103,7 +103,8 @@ body {
   .sectionContainer {
     box-sizing: border-box;
     height: 100%;
-    padding-top: 10%;
+    display: table-cell;
+    width: 75%;
   }
 
 
