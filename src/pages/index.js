@@ -221,6 +221,7 @@ const IndexPage = () => {
           licenseKey={"YOUR_KEY_HERE"}
           scrollingSpeed={1000} /* Options here */
           responsiveWidth={425}
+          lockAnchors={true}
           normalScrollElements={'.timelinescroller , .timeline'}
           anchors={['homesection','whatweDoSection','WhoWeAreSection','CaseSection','ContactSection']}
           render={({ state, fullpageApi }) => {
