@@ -1,11 +1,10 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from "react"
 
 import Layout from "../components/layout"
 
-
 import { MdMenu } from "react-icons/all"
 
-import LogoFulll from "../assets/logoFull.svg";
+import LogoFulll from "../assets/logoFull.svg"
 //External Libraries
 import ReactFullpage from "@fullpage/react-fullpage"
 
@@ -17,7 +16,6 @@ import WhoWeAreSection from "../components/Sections/WhoWeAreSection"
 import ContactSection from "../components/Sections/ContactSection"
 import { graphql, useStaticQuery } from "gatsby"
 import Particles from "react-particles-js"
-
 
 const IndexPage = () => {
   let _fullpageApi
@@ -35,21 +33,20 @@ const IndexPage = () => {
   var sizeCases = query.allWordpressAcfUsecase.nodes.length
 
   useEffect(() => {
-
-      var menu = document.querySelector("#navigation");
-      var button = document.querySelector('#hamburgermenu').addEventListener("click", _ => menu.classList.toggle('is-active'))
-      var menuItems = document.querySelectorAll('li').forEach((item)=>{
-          item.addEventListener("click", _ => menu.classList.toggle('is-active'))
-      })
-
-
-  },[]);
+    var menu = document.querySelector("#navigation")
+    var button = document
+      .querySelector("#hamburgermenu")
+      .addEventListener("click", _ => menu.classList.toggle("is-active"))
+    var menuItems = document.querySelectorAll("li").forEach(item => {
+      item.addEventListener("click", _ => menu.classList.toggle("is-active"))
+    })
+  }, [])
 
   return (
     <Layout>
       <React.Fragment>
         <div id="particles-js">
-        <Particles
+          <Particles
             params={{
               particles: {
                 number: {
@@ -63,20 +60,19 @@ const IndexPage = () => {
                   value: "#9c7409",
                 },
                 shape: {
-                  type:'images',
-                  images:[
+                  type: "images",
+                  images: [
                     {
-                      src: '../../squareborder.png',
-                      width:100,
-                      height:100
-                    
+                      src: "../../squareborder.png",
+                      width: 100,
+                      height: 100,
                     },
                     {
-                      src: '../../squarerotated.png',
-                      width:100,
-                      height:100,
-                  }
-                  ]
+                      src: "../../squarerotated.png",
+                      width: 100,
+                      height: 100,
+                    },
+                  ],
                 },
                 opacity: {
                   value: 0.30517838682439088,
@@ -124,24 +120,20 @@ const IndexPage = () => {
               retina_detect: true,
             }}
           />
-          
         </div>
-        
-     
+
         <div className="mobilebar">
-            <div className="hamburger">
-              <div id="hamburgermenu">
+          <div className="hamburger">
+            <div id="hamburgermenu">
               <MdMenu size="3em" />
-              </div>
             </div>
           </div>
-      
+        </div>
 
-        <nav className="navigationContainer" id="navigation" >
-          
-          <div className="verticalLine" style={{flexGrow:"0.1"}}></div>
-         <LogoFulll className="svg"/>
-          <div className="verticalLine" style={{flexGrow:"0.3"}}></div>
+        <nav className="navigationContainer" id="navigation">
+          <div className="verticalLine" style={{ flexGrow: "0.1" }}></div>
+          <LogoFulll className="svg" />
+          <div className="verticalLine" style={{ flexGrow: "0.3" }}></div>
           <ul>
             <li
               onClick={() => {
@@ -177,43 +169,41 @@ const IndexPage = () => {
               undefined
             )}
 
-            {
-              sizeCases >= 3 ? (
-
-                <li
+            {sizeCases >= 3 ? (
+              <li
                 onClick={() => {
                   _fullpageApi.moveTo(5)
                 }}
               >
                 CONTACT
               </li>
-              ):(
-                
-            <li
-            onClick={() => {
-              _fullpageApi.moveTo(4)
-            }}
-          >
-            CONTACT
-          </li>
-              )
-            }
-
+            ) : (
+              <li
+                onClick={() => {
+                  _fullpageApi.moveTo(4)
+                }}
+              >
+                CONTACT
+              </li>
+            )}
           </ul>
           <div className="verticalLine"></div>
         </nav>
 
-        
-      
         <ReactFullpage
-    
           //fullpage options
           licenseKey={"YOUR_KEY_HERE"}
           scrollingSpeed={1000} /* Options here */
           responsiveWidth={425}
           lockAnchors={true}
-          normalScrollElements={'.timelinescroller , .timeline'}
-          anchors={['homesection','whatweDoSection','WhoWeAreSection','CaseSection','ContactSection']}
+          normalScrollElements={".timelinescroller , .timeline , #caseScroller"}
+          anchors={[
+            "homesection",
+            "whatweDoSection",
+            "WhoWeAreSection",
+            "CaseSection",
+            "ContactSection",
+          ]}
           render={({ state, fullpageApi }) => {
             _fullpageApi = fullpageApi
             return (
@@ -242,7 +232,6 @@ const IndexPage = () => {
             )
           }}
         />
-        
       </React.Fragment>
     </Layout>
   )

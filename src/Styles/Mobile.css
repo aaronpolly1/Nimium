@@ -1,86 +1,72 @@
 @media only screen and (max-width: 425px) {
-
-    h1 {
-        font-size: 1.5rem !important;
-        line-height: 2rem !important;
-        width: 100% !important;
-    }
-
-    p{
-        font-size: 1rem !important;
-    }
-
-    form div {
-        display: flex;
-        flex-direction: column !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-    }
-    
-    .caseScroller{
-
-        width: 120%;
-        margin-left: -13%;
-    }
-
-    .subDescription
-    {
-        width: 100% !important;
-    }
-
-    .case
-    {
-        width: 48% !important;
-    }
-    
-
-    form div > div {
-        border:none !important;
-        width: 100% !important;
-        padding-left: 0% !important;
-        padding-right: 5% !important;
-        box-sizing: border-box !important;
-
-    }
-
-    #particles-js
-    {
-        position: fixed !important;
-    }
-
-
-    form button {
-        margin-top: 10% !important;
-        width: 90% !important;
-    }
-    .StatsContainer  span 
-    {
-        font-size: 5rem !important;
-    }
-
-    .fullpage-wrapper
-    {
-        padding-left: 10%;
-        padding-right: 5%;
-    }
-
-    .sectionContainer
-    {
-    margin: 1rem 0.1rem;
-
-    }
-
-    #timelinesection {
-        padding-left: 0.5%;
-    }
-
-    #whatweDoSection2
-    {
-        height: auto !important;
-    }
-
-    .fp-slides
-    {
-        height: auto;
-    }
+  h1 {
+    font-size: 1.5rem !important;
+    line-height: 2rem !important;
+    width: 100% !important;
   }
+
+  p {
+    font-size: 1rem !important;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+  }
+
+  .caseScroller {
+    width: 120%;
+    margin-left: -13%;
+  }
+
+  .subDescription {
+    width: 100% !important;
+  }
+
+  .case {
+    width: 48% !important;
+  }
+
+  form div > div {
+    border: none !important;
+    width: 100% !important;
+    padding-left: 0% !important;
+    padding-right: 5% !important;
+    box-sizing: border-box !important;
+  }
+
+  #particles-js {
+    position: fixed !important;
+  }
+
+  form button {
+    margin-top: 10% !important;
+    width: 90% !important;
+  }
+  .StatsContainer span {
+    font-size: 5rem !important;
+  }
+
+  .fullpage-wrapper {
+    padding-left: 10%;
+    padding-right: 5%;
+  }
+
+  .sectionContainer {
+    margin: 1rem 0.1rem;
+  }
+
+  #timelinesection {
+    padding-left: 0.5%;
+  }
+
+  #whatweDoSection2 {
+    height: auto !important;
+  }
+
+  .fp-slides {
+    height: auto;
+  }
+}

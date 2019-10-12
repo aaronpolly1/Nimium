@@ -4,15 +4,14 @@ import "./timeLineItem.css"
 const timeLineItem = props => {
   const { step, index } = props
 
-
-
   return (
     <div className="timeLineItemContainer">
       <div className="timeStepUpContainer">
-      {(index + 1) % 2 !== 0 ? (
+        {(index + 1) % 2 !== 0 ? (
           <div className="timelineContentBox">
-              <span className="title">{step.title}</span>
-            <span className="content"
+            <span className="title">{step.title}</span>
+            <span
+              className="content"
               dangerouslySetInnerHTML={{
                 __html: step.excerpt,
               }}
@@ -29,8 +28,9 @@ const timeLineItem = props => {
       <div className="timeStepDownContainer">
         {(index + 1) % 2 === 0 ? (
           <div className="timelineContentBox">
-              <span className="title">{step.title}</span>
-            <span className="content"
+            <span className="title">{step.title}</span>
+            <span
+              className="content"
               dangerouslySetInnerHTML={{
                 __html: step.excerpt,
               }}
@@ -45,4 +45,3 @@ const timeLineItem = props => {
 }
 
 export default timeLineItem
-

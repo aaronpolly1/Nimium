@@ -23,8 +23,6 @@ const CounterContainer = {
   color: "#D19900",
 }
 
-
-
 const StatsContainer = props => {
   const { number, subtitle, visible, operator } = props
   return (
@@ -42,4 +40,3 @@ const StatsContainer = props => {
 }
 
 export default StatsContainer
-
