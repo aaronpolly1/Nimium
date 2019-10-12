@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect}  from "react"
 import SectionHeader from "../SectionHeader"
 import TimeLineItem from "../TimeLineItem/timeLineItem"
 import { graphql, useStaticQuery } from "gatsby"
@@ -18,6 +18,26 @@ const WhatWeDoSection = props => {
       }
     }
   `)
+
+
+
+  
+  function scrollHorizontally(e) {
+    e = window.event || e;
+    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    document.getElementById('timeline').scrollLeft -= (delta*40); // Multiplied by 40
+    e.preventDefault();
+}
+
+  useEffect(() => {
+
+       document.getElementById('timeline').addEventListener('mousewheel',(e) => {
+          scrollHorizontally(e)
+       });
+         
+ 
+
+},[]);
 
   return (
     <div class="slide">
@@ -48,9 +68,9 @@ const WhatWeDoSection = props => {
             subDescription="Tackling business challenges, we follow these steps: "
           />
 
-          <div className="timelinescroller">
+          <div className="timelinescroller" id="timeline"> 
           
-              <section class="timeline">
+              <section class="timeline" id="timeline">
                   {query.allWordpressWpWorkingsteps.edges.map((step, index) => {
                     return <TimeLineItem step={step.node} index={index} />
                   })}

@@ -1,8 +1,10 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./timeLineItem.css"
 
 const timeLineItem = props => {
   const { step, index } = props
+
+
 
   return (
     <div className="timeLineItemContainer">
