@@ -105,7 +105,7 @@ body {
   .sectionContainer {
     box-sizing: border-box;
     height: 100%;
-    display: table-cell;
+    display: contents;
     width: 75%;
   }
 
@@ -259,6 +259,23 @@ body {
     background: #FFC21C;
     border-radius: 10px;
   }
+
+
+  .timelinescroller::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  
+  .timelinescroller::-webkit-scrollbar-track {
+    background:  #0c0903;
+  }
+
+  
+  .timelinescroller::-webkit-scrollbar-thumb {
+    background: #FFC21C;
+    border-radius: 10px;
+  }
+
 
 
 /* Change the white to any color ;) */

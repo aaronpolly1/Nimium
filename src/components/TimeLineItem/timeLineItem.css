@@ -5,6 +5,8 @@
     height: 50vh;
     box-sizing: content-box;
     padding-bottom: 1%;
+    display: flex;
+    flex-direction: column;
   }
 
 
@@ -12,7 +14,7 @@
   {
     height: 40%;
     display: flex;
-    align-items: flex-end;
+    align-content: flex-end;
     justify-content: flex-end;
   }
 
@@ -26,8 +28,9 @@
   {
     height: 40%;
     display: flex;
-    align-items: flex-start;
+    align-content: flex-start;
     justify-content: flex-start;
+
   }
 
   .timelineContentBox
@@ -35,20 +38,26 @@
     background-color: orange;
     padding: 4%;
     overflow-wrap: break-word;
-    max-width: 400px;
+    width: 400px;
+  
   }
 
   .timelinescroller
   {
-    width: 100%;
-    overflow-x: scroll;
+    width: auto;
+    margin: 0px 0 0 10px;
+    padding: 10px;
+    overflow-x: auto;
     overflow-y: hidden;
+    max-width: 100%;
 
   }
 
   .timeline{
     display: flex;
     width:max-content;
+    padding: 5%;
+
   }
 
   .timelineContentBox .title {

@@ -114,6 +114,7 @@ const ContactSection = props => {
           onClick={e => {
             e.preventDefault()
 
+            alert(message)
             axios({
               method: "post",
               url:
