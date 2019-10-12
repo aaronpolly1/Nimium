@@ -24,10 +24,6 @@ const CaseSection = props => {
     }
   `)
 
-  let previousCase
-
-  
-
   return (
     <div className="sectionContainer " id='usecaseSection'>
       <SectionHeader title="DISCOVER OUR CASES" />
@@ -35,8 +31,7 @@ const CaseSection = props => {
       <div className="caseScroller">
         <div className="caseContainer">
           <div className="scrollbox" id="scrollCasesLeft"></div>
-          {query.allWordpressAcfUsecase.nodes.map((node, index) => {
-            previousCase = node.wordpress_id
+          {query.allWordpressAcfUsecase.nodes.map((node) => {
             return <UseCaseCard case={node} />
           })}
           <div className="scrollbox right"></div>

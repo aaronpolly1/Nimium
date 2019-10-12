@@ -1,9 +1,7 @@
 import React, {useEffect} from 'react';
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+
 
 import { MdMenu } from "react-icons/all"
 
@@ -19,8 +17,7 @@ import WhoWeAreSection from "../components/Sections/WhoWeAreSection"
 import ContactSection from "../components/Sections/ContactSection"
 import { graphql, useStaticQuery } from "gatsby"
 import Particles from "react-particles-js"
-// import $ from 'jquery' 
-import { display } from '@material-ui/system';
+
 
 const IndexPage = () => {
   let _fullpageApi
@@ -45,13 +42,6 @@ const IndexPage = () => {
           item.addEventListener("click", _ => menu.classList.toggle('is-active'))
       })
 
-
-      // var urlParams = new URLSearchParams(window.location.search);
-      // if(urlParams.has('section'))
-      // {
-    
-      //   document.getElementById(urlParams.get('section')).scrollIntoView();
-      // }
 
   },[]);
 

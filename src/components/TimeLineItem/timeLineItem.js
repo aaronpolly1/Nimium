@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import "./timeLineItem.css"
 
 const timeLineItem = props => {
@@ -9,7 +9,7 @@ const timeLineItem = props => {
   return (
     <div className="timeLineItemContainer">
       <div className="timeStepUpContainer">
-      {(index + 1) % 2 != 0 ? (
+      {(index + 1) % 2 !== 0 ? (
           <div className="timelineContentBox">
               <span className="title">{step.title}</span>
             <span className="content"
@@ -27,7 +27,7 @@ const timeLineItem = props => {
         <div className="line"></div>
       </div>
       <div className="timeStepDownContainer">
-        {(index + 1) % 2 == 0 ? (
+        {(index + 1) % 2 === 0 ? (
           <div className="timelineContentBox">
               <span className="title">{step.title}</span>
             <span className="content"
