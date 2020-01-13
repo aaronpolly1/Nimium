@@ -31,9 +31,9 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
           rule: {
-            include: /asshttp://nimiumbackend-env.pvtfst5xqs.eu-central-1.elasticbeanstalk.com/ets/
-          }
-      }
+            include: /assets/,
+          },
+      },
   },
     {
       resolve: `gatsby-source-wordpress`,
