@@ -31,7 +31,7 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
           rule: {
-            include: /assets/
+            include: /asshttp://nimiumbackend-env.pvtfst5xqs.eu-central-1.elasticbeanstalk.com/ets/
           }
       }
   },
@@ -39,7 +39,7 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your wordpress source
-        baseUrl: `http://nimium-env.ukqcmidxpz.eu-central-1.elasticbeanstalk.com`,
+        baseUrl: `nimiumbackend-env.pvtfst5xqs.eu-central-1.elasticbeanstalk.com`,
         protocol: `http`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
