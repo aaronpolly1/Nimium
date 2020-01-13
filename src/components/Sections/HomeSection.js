@@ -5,10 +5,14 @@ const HomeSection = (props) =>
 {
     return(
       
-        <SectionHeader
+      <div className="homeSection">
+
+<SectionHeader
         title="WE ARE PROJECT NIMIUM, A COLLABORATION OF BUSINESS ARCHITECTS"
         subDescription="We create better companies by aligning people, processes & tools."
       />
+      </div>
+      
     )
 }
 

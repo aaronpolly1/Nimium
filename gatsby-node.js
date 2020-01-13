@@ -4,17 +4,6 @@ const slash = require(`slash`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 
-// exports.onCreateWebpackConfig = ({
-//   actions,
-// }) => {
-//   const { setWebpackConfig } = actions;
-//   setWebpackConfig({
-//     externals: {
-
-//       jquery: 'jQuery', // important: 'Q' capitalized
-//     }
-//   })
-// }
 
 
 exports.createPages = async ({ graphql, actions , reporter }) => {

@@ -14,6 +14,11 @@
     transition-timing-function: ease-in;
   }
 
+.showTablet
+{
+  display: block !important;
+}
+
   .navigationContainer.is-active {
     top: 0vh;
   }
@@ -92,10 +97,27 @@
   form div {
     display: block;
   }
+
+  .timeLineItemContainer
+  {
+    height: 65vh !important; 
+  }
+
+  .timelineContentBox .content p
+  {
+    font-size: 1.2vh !important;
+  }
 }
+
+
 
 @media only screen and (max-height: 700px) {
   .sectionContainer {
     padding-top: 2% !important;
+  }
+
+  .timeLineItemContainer
+  {
+    height: 65vh !important; 
   }
 }

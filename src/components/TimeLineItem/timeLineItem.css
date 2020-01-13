@@ -7,20 +7,20 @@
 }
 
 .timeStepUpContainer {
-  height: 40%;
+  height: 20vh;
   display: flex;
   align-content: flex-end;
   justify-content: flex-end;
 }
 
 .stepLine {
-  height: 25%;
+  height: 10vh;
   display: flex;
   align-items: center;
 }
 
 .timeStepDownContainer {
-  height: 40%;
+  height: 20vh;
   display: flex;
   align-content: flex-start;
   justify-content: flex-start;
@@ -30,7 +30,7 @@
   background-color: orange;
   padding: 4%;
   overflow-wrap: break-word;
-  width: 400px;
+  width: 30vw;
 }
 
 .timelinescroller {
@@ -50,16 +50,16 @@
 
 .timelineContentBox .title {
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 3vh !important;
 }
 
 .timelineContentBox .content p {
-  font-size: 1em;
-  margin-top: 2px;
+  font-size: 1.5vh !important;
+  margin-top: 2px !important;
 }
 
 span.number {
-  font-size: 3rem;
+  font-size: 6vh;
   width: 10%;
   text-align: center;
   color: #ffc21c;
@@ -77,6 +77,14 @@ span.number {
     width: auto !important;
     overflow-x: initial !important;
     overflow-y: initial !important;
+    margin:0 !important;
+    padding:0 !important;
+    margin-top: 15% !important;
+  }
+
+  .timelineContentBox
+  {
+    width: 100% !important;
   }
 
   .timeline {
@@ -86,30 +94,54 @@ span.number {
   }
 
   .timeLineItemContainer {
-    height: auto !important;
+    height: 35vh !important;
+    display: block;
+    margin-bottom: 5% !important;
   }
 
   .timeStepDownContainer {
     width: 80%;
     float: right;
+    height: 35vh !important;
   }
 
   .timeStepUpContainer {
     width: 80%;
     float: right;
+    height: 35vh !important;
   }
 
   .stepLine {
-    height: 170px;
-    display: block;
-    width: 20%;
-    float: left;
+    height: 20vh !important;
+    display: block !important;
+    width: 20% !important;
+    float: left !important;
+
   }
 
   .line {
     background: none !important;
     width: 20% !important;
-    height: 73% !important;
-    border-right: 5px solid;
+    height: 30vh !important;
+    border-right: 1px solid gray;
   }
+
+  .stepLine .number
+  {
+    height: 10vh !important;
+    line-height: 13vh !important;
+    margin-top: -32px !important;
+    display: block !important;
+  }
+
+  .timelineContentBox .content p
+  {
+    font-size: 2vh !important;
+  }
+
+  .timeLineItemContainer:nth-child(even) .timeStepUpContainer
+  {
+    display: none !important;
+  }
+
 }

@@ -1,5 +1,6 @@
 import React from "react"
-import "./timeLineItem.css"
+
+
 
 const timeLineItem = props => {
   const { step, index } = props

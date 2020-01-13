@@ -1,6 +1,6 @@
 .case {
     margin-right: 10px;
-    width: 200px;
+    width: 30vh;
     transition: width 0.3s ease-in-out;
     -webkit-transition: width 0.3s ease-in-out;
     position: relative;
@@ -8,30 +8,35 @@
   }
   
   .case:hover {
-    width: 500px;
+    width: 70vh;
   }
   
   .caseDescription {
 
     position: absolute;
     background-color: #d19900;
-    left: 200px;
+    left: 30vh;
     white-space: pre-wrap;
     padding: 5%;
     box-sizing: border-box;
     bottom: 0px;
-    height: 200px;
-    width: 300px;
+    height: 30vh;
+    width: 40vh;
+  }
+
+  .caseDescription div 
+  {
+    font-size: 13px;
   }
   
   .caseDescription div
   {
-    height: 150px;
-    width: 250px;
+    height: 20vh;
+    width: 35vh;
   }
   
   .caseHeader img {
-    width: 200px;
+    width: 30vh;
     position: absolute;
     top:0;
     filter: brightness(60%);
@@ -61,6 +66,7 @@
     margin-left: 5%;
     margin-bottom: 0rem;
     margin-right: 5%;
+    margin-top: 0px;
   }
 
 
@@ -73,8 +79,8 @@
   }
 
   .caseHeader {
-    height: 200px;
-    width: 200px;
+    height: 30vh;
+    width: 30vh;
     float: left;
     display: flex;
     justify-content: flex-end;

@@ -5,19 +5,22 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-
-
 import "../Styles/App.css";
 import "../Styles/Mobile.css";
 import "../Styles/Tablet.css"
+import "../Styles/Retina.css"
+import "../Styles/Hamburger.css"
+import "../components/UseCaseCard/UseCaseCard.css"
+import "../components/TimeLineItem/timeLineItem.css"
+import React from "react"
+import PropTypes from "prop-types"
+
+
 
 
 const Layout = ({ children }) => {
+
+
 
   return (
     <>

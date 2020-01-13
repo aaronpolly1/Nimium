@@ -1,11 +1,29 @@
 import React from "react";
 import SectionHeader from "../SectionHeader";
-
+import { graphql, useStaticQuery } from "gatsby"
+import parse from 'html-react-parser';
 import StatsContainer from "../StatsContainer";
 
 import VisibilitySensor from "react-visibility-sensor"
 
 const WhoWeAreSection = props => {
+
+  const query = useStaticQuery(graphql`
+  {
+    allWordpressWpStats {
+      edges {
+        node {
+          id
+          acf {
+            number
+            operator
+            subtitle
+          }
+        }
+      }
+    }
+  }
+`)
 
 
   return (
@@ -20,9 +38,16 @@ const WhoWeAreSection = props => {
       <VisibilitySensor >
       {({isVisible}) =>
       <React.Fragment>
-           <StatsContainer subtitle="consultants" number={30} operator="+" visible={isVisible} />
-           <StatsContainer subtitle="companies served" number={30}  visible={isVisible} /> 
-           <StatsContainer subtitle="problems solved" number={150} operator="+" visible={isVisible} />
+
+          {
+            query.allWordpressWpStats.edges.map((stat,index) => {
+              console.log("stat",stat)
+              return   <StatsContainer subtitle={stat.node.acf.subtitle} number={stat.node.acf.number} operator={stat.node.acf.operator} visible={isVisible} />
+            })
+          }
+
+         
+           
            </React.Fragment>
       }
       </VisibilitySensor>

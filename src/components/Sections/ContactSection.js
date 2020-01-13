@@ -3,6 +3,8 @@ import SectionHeader from "../SectionHeader"
 import TextField from "@material-ui/core/TextField"
 import { withStyles } from "@material-ui/styles"
 import axios from "axios"
+import parse from 'html-react-parser';
+import Notifications, {notify} from 'react-notify-toast';
 
 const styles = {
   input: {
@@ -41,7 +43,7 @@ const ContactSection = props => {
   return (
     <div className="sectionContainer">
       <SectionHeader
-        title="GET IN TOUCH. THROW US A BONE"
+        title={parse("GET IN TOUCH.<br>THROW US A BONE")}
         subDescription="Give us a short description of your business challenge, and we’ll arrange a meeting with our top business architect in your industry."
       />
       <form>
@@ -61,7 +63,7 @@ const ContactSection = props => {
             <TextField
               autoComplete={false}
               fullWidth
-              id="name"
+              id="contactname"
               label="Name"
               value={name}
               margin="normal"
@@ -73,7 +75,7 @@ const ContactSection = props => {
             <TextField
             autoComplete={false}
               fullWidth
-              id="email"
+              id="contactemail"
               label="Email"
               value={email}
               name="email"
@@ -92,6 +94,7 @@ const ContactSection = props => {
             }}
           >
             <TextField
+              id="contactmessage"
               placeholder="Write Text here..."
               label="Message"
               multiline={true}
@@ -113,19 +116,42 @@ const ContactSection = props => {
           name="submit"
           onClick={e => {
             e.preventDefault()
-
-            alert(message)
             axios({
               method: "post",
               url:
-                "http://nimium-env.ukqcmidxpz.eu-central-1.elasticbeanstalk.com/wp-json/rcdb/v1/messages",
+                "https://backend.nimium.be/wp-json/rcdb/v1/messages",
               data: {
                 fromName: name,
                 fromEmail: email,
                 message: message,
               },
-            })
+            }).then(response => {
+
+              if(response.status == 200)
+              {
+
+                
+                let myColor = { background: "#d19900", text: "#0c0903" };
+                notify.show("Message Sent", "custom", 5000, myColor)
+
+                document.querySelector('#contactmessage').value = "";
+                document.querySelector('#contactname').value = "";
+                document.querySelector('#contactemail').value = "";
+
+                
+
+              }
+              else
+              {
+                let myColor = { background: "#d19900", text: "#0c0903" };
+                notify.show("Auwch, Your message could not be sent", "custom", 5000, myColor)
+              }
+            }
+              
+            )
           }}
+
+
         >
           SEND
         </button>

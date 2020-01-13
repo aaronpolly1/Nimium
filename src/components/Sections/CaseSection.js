@@ -5,6 +5,7 @@ import UseCaseCard from "../UseCaseCard/UseCaseCard"
 import { graphql, useStaticQuery } from "gatsby"
 
 const CaseSection = props => {
+  
   const query = useStaticQuery(graphql`
     {
       allWordpressAcfUsecase {

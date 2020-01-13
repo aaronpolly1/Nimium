@@ -9,13 +9,13 @@ const hrStyle = {
 }
 
 const numberStyle = {
-  fontSize: "5em",
+  fontSize: "17vh",
 }
 
 const subTitleStyle = {
   color: "white",
-  fontSize: "1em",
-  marginBottom: "1em",
+  fontSize: "4vh",
+  margin: '0.5em 0em'
 }
 
 const CounterContainer = {
@@ -26,14 +26,14 @@ const CounterContainer = {
 const StatsContainer = props => {
   const { number, subtitle, visible, operator } = props
   return (
-    <div style={CounterContainer}>
+    <div className="statscontainer" style={CounterContainer}>
       {visible ? (
-        <CountUp style={numberStyle} end={number}></CountUp>
+        <CountUp className="number" style={numberStyle} end={number}></CountUp>
       ) : (
-        <span style={numberStyle}>-</span>
+        <span className="number" style={numberStyle}>{number}</span>
       )}
-      {operator ? <span style={numberStyle}>{operator}</span> : undefined}
-      <p style={subTitleStyle}>{subtitle}</p>
+      {operator ? <span className="number" style={numberStyle}>{operator}</span> : undefined}
+      <p className="subTitleText" style={subTitleStyle}>{subtitle}</p>
       <hr style={hrStyle} />
     </div>
   )

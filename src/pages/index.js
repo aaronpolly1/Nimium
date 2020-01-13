@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect,componentDidMount } from "react"
 
 import Layout from "../components/layout"
 
@@ -16,6 +16,7 @@ import WhoWeAreSection from "../components/Sections/WhoWeAreSection"
 import ContactSection from "../components/Sections/ContactSection"
 import { graphql, useStaticQuery } from "gatsby"
 import Particles from "react-particles-js"
+import Notifications, {notify} from 'react-notify-toast';
 
 const IndexPage = () => {
   let _fullpageApi
@@ -30,20 +31,59 @@ const IndexPage = () => {
     }
   `)
 
+
+
   var sizeCases = query.allWordpressAcfUsecase.nodes.length
+  var isTouch = false;
+
+  //eerste event
+  function wheelEventMoveSlideright(e) {
+    //als de direction down is  ga naar rechts
+    if (
+      _fullpageApi.getActiveSection().index == 1 &&
+      _fullpageApi.getActiveSlide().index == 0
+    ) {
+      if (e.deltaY > 0) {
+        _fullpageApi.moveSlideRight()
+      }
+    }
+
+    //enable scroll
+    _fullpageApi.setAllowScrolling(true)
+  }
 
   useEffect(() => {
+    document.querySelector("body").addEventListener("touchstart",function(e)
+    {
+      isTouch = true;
+    });
+  
+
     var menu = document.querySelector("#navigation")
+    var hamburger = document.querySelector("#hamburgermenu")
     var button = document
       .querySelector("#hamburgermenu")
+      .addEventListener("click", _ => hamburger.classList.toggle("is-active"))
+
+    document
+      .querySelector("#hamburgermenu")
       .addEventListener("click", _ => menu.classList.toggle("is-active"))
+
     var menuItems = document.querySelectorAll("li").forEach(item => {
       item.addEventListener("click", _ => menu.classList.toggle("is-active"))
     })
+
+
+
+
+    
   }, [])
+
+ 
 
   return (
     <Layout>
+      <Notifications />
       <React.Fragment>
         <div id="particles-js">
           <Particles
@@ -123,11 +163,15 @@ const IndexPage = () => {
         </div>
 
         <div className="mobilebar">
-          <div className="hamburger">
-            <div id="hamburgermenu">
-              <MdMenu size="3em" />
-            </div>
-          </div>
+          <button
+            class="hamburger hamburger--collapse"
+            id="hamburgermenu"
+            type="button"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+          </button>
         </div>
 
         <nav className="navigationContainer" id="navigation">
@@ -192,11 +236,123 @@ const IndexPage = () => {
 
         <ReactFullpage
           //fullpage options
-          licenseKey={"YOUR_KEY_HERE"}
+          licenseKey={"5E56565D-9FBF4FE7-B54135CE-90C453BB"}
           scrollingSpeed={1000} /* Options here */
           responsiveWidth={425}
+          scrollHorizontally={true} /* Because we are using the extension */
+          scrollHorizontallyKey={"B19E062E-2A8E43E8-A66E6A24-54A16735 "}
           lockAnchors={true}
-          normalScrollElements={".timelinescroller , .timeline , #caseScroller"}
+          afterLoad={function(origin, destination, direction) {
+            if (destination.index == 1 && !(isTouch)) {
+              //als ge op what do we do komt disable scroll
+              _fullpageApi.setAllowScrolling(false)
+              _fullpageApi.setKeyboardScrolling(false)
+
+              //Check of er nog eens gescrolled wordt
+              document
+                .querySelector("body")
+                .addEventListener("wheel", function(e) {
+                
+                  //als de direction down is  ga naar rechts
+                  if (
+                    _fullpageApi.getActiveSection().index == 1 &&
+                    _fullpageApi.getActiveSlide().index == 0
+                  ) {
+                    if (e.deltaY > 0) {
+                      _fullpageApi.moveSlideRight()
+                    }
+                  }
+
+                  //enable scroll
+                  _fullpageApi.setAllowScrolling(true)
+                })
+
+              document
+                .querySelector("body")
+                .addEventListener("wheel", function(e) {
+            
+
+                  if (
+                    _fullpageApi.getActiveSection().index == 1 &&
+                    _fullpageApi.getActiveSlide().index == 1
+                  ) {
+                    _fullpageApi.setAllowScrolling(false)
+                    var timeline = document.getElementById("timeline")
+                
+  
+                    if (e.deltaY < 0) {
+                      if (timeline.scrollLeft == 0) {
+                        _fullpageApi.moveSlideLeft()
+                      }
+                    }
+
+                    if (e.deltaY > 0) {
+                      //scroll timeline
+                      
+                      if (
+                        timeline.scrollWidth <=
+                        timeline.scrollLeft + timeline.clientWidth
+                      ) {
+                        _fullpageApi.moveSectionDown()
+                      }
+                    }
+                  }
+
+                  //enable scroll
+                  //_fullpageApi.setAllowScrolling(true)
+                })
+
+              //Check of er nog eens gescrolled wordt
+              document
+                .querySelector("body")
+                .addEventListener("keydown", function(e) {
+                  //als de direction down is  ga naar rechts
+
+                  if (_fullpageApi.getActiveSection().index == 1) {
+                    if (
+                      e.keyCode == "40" &&
+                      _fullpageApi.getActiveSlide().index == 0
+                    ) {
+                      _fullpageApi.moveSlideRight()
+                    }
+                  }
+
+                  //enable scroll
+                  _fullpageApi.setKeyboardScrolling(true)
+                })
+
+              document
+                .querySelector("body")
+                .addEventListener("keydown", function(e) {
+                  if (_fullpageApi.getActiveSection().index == 1) {
+                    if (
+                      e.keyCode == "38" &&
+                      _fullpageApi.getActiveSlide().index == 1
+                    ) {
+                      _fullpageApi.moveSlideLeft()
+                    }
+                  }
+
+                  //enable scroll
+                  _fullpageApi.setKeyboardScrolling(true)
+                })
+
+         
+            }
+          }}
+
+        
+
+          onLeave={function(origin, destination, direction) {
+            if (origin.index == 1) {
+              document
+                .querySelector("body")
+                .removeEventListener("keydown", function(e) {
+               
+                })
+            }
+          }}
+          normalScrollElements={" .timeline , #caseScroller"}
           anchors={[
             "homesection",
             "whatweDoSection",
@@ -205,6 +361,9 @@ const IndexPage = () => {
             "ContactSection",
           ]}
           render={({ state, fullpageApi }) => {
+            if (state.callback == "onLeave") {
+            }
+
             _fullpageApi = fullpageApi
             return (
               <ReactFullpage.Wrapper>

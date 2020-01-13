@@ -5,6 +5,21 @@ module.exports = {
     author: `@bisqit`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -31,16 +46,16 @@ module.exports = {
       resolve: 'gatsby-plugin-react-svg',
       options: {
           rule: {
-            include: /assets/,
-          },
-      },
+            include: /assets/
+          }
+      }
   },
     {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your wordpress source
-        baseUrl: `nimiumbackend-env.pvtfst5xqs.eu-central-1.elasticbeanstalk.com`,
-        protocol: `http`,
+        baseUrl: `backend.nimium.be`,
+        protocol: `https`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?

@@ -1,5 +1,5 @@
 import React from "react"
-import "./UseCaseCard.css"
+
 import { Link } from "gatsby"
 import { Textfit } from "react-textfit"
 
@@ -19,7 +19,7 @@ const UseCaseCard = props => {
       </Link>
 
       <div className="caseDescription">
-        <Textfit mode="multi">{props.case.acf.summary}</Textfit>
+        <Textfit mode="multi">{props.case.acf.summary} </Textfit>
 
         <Link  className="readmore" to={"/usecases/" + props.case.wordpress_id}>Read More</Link>
       </div>

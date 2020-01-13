@@ -1,0 +1,35 @@
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+  
+  .showTablet
+{
+  display: none;
+}
+
+  .number
+  {
+    font-size: 3em !important;
+  }
+
+  .subTitleText
+  {
+    margin:0 !important;
+    font-size: 0.8em !important;
+  }
+
+  .timelineContentBox .title
+  {
+    font-size: 1.5em !important;
+  }
+
+  .timelineContentBox .content p
+  {
+    margin:0 !important;
+    font-size: 0.8em !important;
+  }
+  .timeline
+  {
+    padding: 0 !important;
+  }
+}

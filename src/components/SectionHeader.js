@@ -3,10 +3,10 @@ import React from "react"
 const titleStyle = {
   color: "white",
   fontWeight: "bold",
-  fontSize: "3rem",
+  fontSize: "6.7vh",
   marginBottom: "5px",
   width: "70%",
-  lineHeight: "4rem",
+  lineHeight: "9vh",
   marginTop: "0%",
 }
 
@@ -19,7 +19,7 @@ const hrStyle = {
 }
 
 const subDescriptionStyle = {
-  fontSize: "1.5rem",
+  fontSize: "3.5vh",
   width: "77%",
 }
 

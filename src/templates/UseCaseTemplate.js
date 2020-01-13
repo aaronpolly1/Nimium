@@ -123,12 +123,12 @@ const UseCaseTemplate = ({ data, location, pageContext }) => {
           ></div>
         </div>
         {
-          (pageContext.previousCase)?(   <Link activeClassName={"usecaseSection"} className="otherPageLink" to={"/usecases/" + pageContext.previousCase.wordpress_id}>
+          (pageContext.previousCase)?(   <Link activeClassName={"usecaseSection"} style={{float:'left'}} className="otherPageLink" to={"/usecases/" + pageContext.previousCase.wordpress_id}>
           Previous Case{" "}
         </Link>):(undefined)
         }
         {
-          (pageContext.nextCase)?(        <Link className="otherPageLink" to={"/usecases/" + pageContext.nextCase.wordpress_id}>Next Case</Link>
+          (pageContext.nextCase)?(        <Link className="otherPageLink" style={{float:'right'}} to={"/usecases/" + pageContext.nextCase.wordpress_id}>Next Case</Link>
           ):(undefined)
         }
      
